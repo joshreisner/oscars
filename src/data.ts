@@ -6,8 +6,7 @@ type nomination = {
 type movie = {
   title: string;
   nominations: nomination[];
-  image?: string;
-  services?: string[];
+  image: string;
 };
 
 export const movies: movie[] = [
@@ -23,11 +22,7 @@ export const movies: movie[] = [
         nominee: "Denmark",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BOTNjM2Y2ZjgtMDc5NS00MDQ1LTgyNGYtYzYwMTAyNWQwYTMyXkEyXkFqcGdeQXVyMjE4NzUxNDA@._V1_.jpg",
-    services: [
-      "https://www.hulu.com/movie/another-round-08c2a90b-c9fb-461d-859c-7417c4c255b7",
-    ],
+    image: "/images/another-round.jpg",
   },
   {
     title: "Better Days",
@@ -37,11 +32,7 @@ export const movies: movie[] = [
         nominee: "Hong Kong",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMTlmNGY5OWQtZDU3OS00YTViLTk1M2QtZTc2ODBmY2Y2NTkzXkEyXkFqcGdeQXVyMTAyNzgyNjQ0._V1_.jpg",
-    services: [
-      "https://www.amazon.com/Better-Days-Dongyu-Zhou/dp/B087YKHX3M/ref=nodl_",
-    ],
+    image: "/images/better-days.jpg",
   },
   {
     title: "Borat Subsequent Moviefilm",
@@ -55,9 +46,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BYjIyMTdjYmUtYzYyOS00YzY0LTkxYmQtYjUxYjViMzRhOGNjXkEyXkFqcGdeQXVyMTAzNTQ1MjEz._V1_.jpg",
-    services: [],
+    image: "/images/borat.jpg",
   },
   {
     title: "Collective",
@@ -71,9 +60,7 @@ export const movies: movie[] = [
         nominee: "Romania",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNDc5MTA2ZjgtOWU4OC00YjU4LTk3ZGUtYmMwZjRhODJiYTdiXkEyXkFqcGdeQXVyMTA2MDU0NjM5._V1_.jpg",
-    services: [],
+    image: "/images/collective.jpg",
   },
   {
     title: "Crip Camp",
@@ -83,9 +70,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMTNlMDI3MGYtY2FmNy00ZDdmLTkzZDMtMDg1MWYyM2M4YzQxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-    services: [],
+    image: "/images/crip-camp.jpg",
   },
   {
     title: "Da 5 Bloods",
@@ -95,9 +80,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNjE4ODEwNzktYjg5Yi00N2YxLWExMmEtMmQyZTBiYWI4MGQwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
-    services: [],
+    image: "/images/da-5-bloods.jpg",
   },
   {
     title: "Emma",
@@ -111,9 +94,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BOGRiODEzM2QtOTUyYi00MWRlLTg4MzMtZGI0YmUzNWUyMjQ0XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_FMjpg_UY864_.jpg",
-    services: [],
+    image: "/images/emma.jpg",
   },
   {
     title: "Eurovision Song Contest: The Story of Fire Saga",
@@ -123,8 +104,7 @@ export const movies: movie[] = [
         nominee: "Husavik",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BYzRjYzA5NTQtOTE3MC00OTYzLWEzODItMzQxYWE1NDJkMDA0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    image: "/images/eurovision.jpg",
   },
   {
     title: "The Father",
@@ -154,8 +134,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    image: "/images/the-father.jpg",
   },
   {
     title: "Greyhound",
@@ -165,8 +144,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://sf1-dycdn-tos.pstatp.com/obj/ies-music/storm_cover_1f9c9f2b32d04b7022ed042569e50958",
+    image: "/images/greyhound.jpg",
   },
   {
     title: "Hillbilly Elegy",
@@ -180,8 +158,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BZGI4NzRkNDgtYzQyOS00YWVjLTllYzctNmQ5NzkzOGIxMDBhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
+    image: "/images/hillbilly-elegy.jpg",
   },
   {
     title: "Judas and the Black Messiah",
@@ -211,8 +188,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BOTYwNWNmM2UtNDhlOC00ZGQzLWI1MTMtMmZlMTFjM2Y1N2ZhXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_.jpg",
+    image: "/images/judas-and-the-black-messiah.jpg",
   },
   {
     title: "The Life Ahead (La Vita Davanti a Se)",
@@ -222,8 +198,7 @@ export const movies: movie[] = [
         nominee: "lo Sì (Seen)",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMTljOGM2NzQtYzY5Yi00YzUwLTljZDktMDZlOGFiYmRiZTA3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    image: "/images/the-life-ahead.jpg",
   },
   {
     title: "Love and Monsters",
@@ -233,8 +208,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BYWVkMWEyMDUtZTVmOC00MTYxLWE1ZTUtNjk4M2IzMjY2OTIxXkEyXkFqcGdeQXVyMDk5Mzc5MQ@@._V1_.jpg",
+    image: "/images/love-and-monsters.jpg",
   },
   {
     title: "Ma Rainey's Black Bottom",
@@ -260,8 +234,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNTBlZGY1OTAtN2RjMC00ZThiLWFiZmUtN2VkOGMxNmMyYjQwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    image: "/images/ma-raineys-black-bottom.jpg",
   },
   {
     title: "The Man Who Sold His Skin",
@@ -271,8 +244,7 @@ export const movies: movie[] = [
         nominee: "Tunisia",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BN2JmZDg0MzUtNDYzOC00OWExLThlMjAtZDExYTNlOTcyODMzXkEyXkFqcGdeQXVyNTU5Mzk0NjE@._V1_.jpg",
+    image: "/images/the-man-who-sold-his-skin.jpg",
   },
   {
     title: "Mank",
@@ -314,8 +286,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BZTllMjI0ZGYtM2FmZC00ZmY4LTlkNTYtZThlOWQ1OGQyZTA3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    image: "/images/mank.jpg",
   },
   {
     title: "The Midnight Sky",
@@ -325,8 +296,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNDQwYjJjODMtOWNmNC00NDJjLThiNDgtNzVkOTM1MjY5NDQ5XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+    image: "/images/the-midnight-sky.jpg",
   },
   {
     title: "Minari",
@@ -356,8 +326,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BM2I4N2NmYTUtMjY4MS00ZTg4LTg1Y2YtOWZkMzk4Yzc4M2M2XkEyXkFqcGdeQXVyMTI5MzA0ODcy._V1_.jpg",
+    image: "/images/minari.jpg",
   },
   {
     title: "The Mole Agent",
@@ -367,8 +336,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNzAxNDJlYTktZTgxYy00NjFmLTgwZDAtM2RmZGIyZmIxOTBmXkEyXkFqcGdeQXVyMTAwMzM3NDI3._V1_.jpg",
+    image: "/images/the-mole-agent.jpg",
   },
   {
     title: "Mulan",
@@ -382,8 +350,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNDliY2E1MjUtNzZkOS00MzJlLTgyOGEtZDg4MTI1NzZkMTBhXkEyXkFqcGdeQXVyNjMwMzc3MjE@._V1_.jpg",
+    image: "/images/mulan.jpg",
   },
   {
     title: "My Octopus Teacher",
@@ -393,8 +360,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://i.pinimg.com/originals/af/78/f4/af78f4ff430c91d32874df55147e9a32.png",
+    image: "/images/my-octopus-teacher.png",
   },
   {
     title: "News of the World",
@@ -416,8 +382,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMDNlNmVlNDItMjE3Yi00ZTA3LWIyOTktNDhhMGFlZjk5ZDQ0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    image: "/images/news-of-the-world.jpg",
   },
   {
     title: "Nomadland",
@@ -447,8 +412,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMDRiZWUxNmItNDU5Yy00ODNmLTk0M2ItZjQzZTA5OTJkZjkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    image: "/images/nomadland.jpg",
   },
   {
     title: "The One and Only Ivan",
@@ -458,8 +422,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BZWY3OTNhNWUtMDk2My00ZGVhLWE5ODQtM2NkOTZiMWM2MGY2XkEyXkFqcGdeQXVyNjMwMzc3MjE@._V1_FMjpg_UY863_.jpg",
+    image: "/images/the-one-and-only-ivan.jpg",
   },
   {
     title: "One Night in Miami…",
@@ -477,8 +440,7 @@ export const movies: movie[] = [
         nominee: "Speak Now",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BYmNmM2JkZDQtYzdiMi00NWU0LWEwNjMtMDk1MTdmZTQwZjZlXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg",
+    image: "/images/one-night-in-miami.jpg",
   },
   {
     title: "Onward",
@@ -488,8 +450,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMTZlYzk3NzQtMmViYS00YWZmLTk5ZTEtNWE0NGVjM2MzYWU1XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_.jpg",
+    image: "/images/onward.jpg",
   },
   {
     title: "Over the Moon",
@@ -499,8 +460,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNTI0ZjVhM2ItMmFkOS00ZmFiLTg4NGQtODJjNTZmMDYxMWMyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+    image: "/images/over-the-moon.jpg",
   },
   {
     title: "Pieces of a Woman",
@@ -510,8 +470,7 @@ export const movies: movie[] = [
         nominee: "Vanessa Kirby",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BMGE3MzMzOTAtOTExMy00MzFiLWFjNDItN2ZiZmYyYjY2MWUwXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+    image: "/images/pieces-of-a-woman.jpg",
   },
   {
     title: "Pinocchio",
@@ -525,8 +484,7 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BNzgxNWJiOWQtZDA5Mi00NjBkLWIxMzUtZTg3Yjk5NjYyMDZjXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg",
+    image: "/images/pinocchio.jpg",
   },
   {
     title: "Promising Young Woman",
@@ -552,7 +510,88 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image:
-      "https://m.media-amazon.com/images/M/MV5BODg1MDBmYzQtY2ZjZC00ZTU0LTk5OGUtNjdmYWJhY2E5OTY1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+    image: "/images/promising-young-woman.jpg",
+  },
+  {
+    title: "Quo Vadis, Aida?",
+    nominations: [
+      {
+        category: "International Feature Film",
+        nominee: "Bosnia and Herzegovina",
+      },
+    ],
+    image: "/images/quo-vadis-aida.jpg",
+  },
+  {
+    title: "A Shaun the Sheep Movie: Farmageddon",
+    nominations: [
+      {
+        category: "Animated Feature Film",
+        nominee: "",
+      },
+    ],
+    image: "/images/shaun-the-sheep.jpg",
+  },
+  {
+    title: "Soul",
+    nominations: [
+      {
+        category: "Achievement in Sound",
+        nominee: "",
+      },
+      {
+        category: "Animated Feature Film",
+        nominee: "",
+      },
+      {
+        category: "Original Score",
+        nominee: "",
+      },
+    ],
+    image: "/images/soul.jpg",
+  },
+  {
+    title: "Sound of Metal",
+    nominations: [
+      {
+        category: "Achievement in Sound",
+        nominee: "",
+      },
+      {
+        category: "Actor in a Leading Role",
+        nominee: "Riz Ahmed",
+      },
+      {
+        category: "Actor in a Supporting Role",
+        nominee: "Paul Raci",
+      },
+      {
+        category: "Best Picture",
+        nominee: "",
+      },
+      {
+        category: "Film Editing",
+        nominee: "",
+      },
+      {
+        category: "Original Screenplay",
+        nominee: "",
+      },
+    ],
+    image: "/images/sound-of-metal.png",
+  },
+  {
+    title: "Tenet",
+    nominations: [
+      {
+        category: "Production Design",
+        nominee: "",
+      },
+      {
+        category: "Visual Effects",
+        nominee: "",
+      },
+    ],
+    image: "/images/tenet.jpg",
   },
 ];

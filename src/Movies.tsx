@@ -14,7 +14,11 @@ export default function Movies() {
             <input type="checkbox" />
           </div>
           <div className="pr-4 w-16 md:w-24">
-            <img src={movie.image} alt={movie.title} />
+            <img
+              src={movie.image}
+              alt={movie.title}
+              className="border rounded"
+            />
           </div>
           <div className="w-56 md:w-auto">
             <h3 className="font-bold">{movie.title}</h3>
