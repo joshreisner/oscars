@@ -1,15 +1,6 @@
-type nomination = {
-  category: string;
-  nominee?: string;
-};
+import { rawMovie } from "../types";
 
-type movie = {
-  title: string;
-  nominations: nomination[];
-  image: string;
-};
-
-export const movies: movie[] = [
+export const rawMovies: rawMovie[] = [
   {
     title: "Another Round",
     nominations: [
@@ -22,7 +13,6 @@ export const movies: movie[] = [
         nominee: "Denmark",
       },
     ],
-    image: "/images/another-round.jpg",
   },
   {
     title: "Better Days",
@@ -32,7 +22,6 @@ export const movies: movie[] = [
         nominee: "Hong Kong",
       },
     ],
-    image: "/images/better-days.jpg",
   },
   {
     title: "Borat Subsequent Moviefilm",
@@ -43,10 +32,9 @@ export const movies: movie[] = [
       },
       {
         category: "Adapted Screenplay",
-        nominee: "",
+        nominee: "Sacha Baron Cohen",
       },
     ],
-    image: "/images/borat.jpg",
   },
   {
     title: "Collective",
@@ -60,7 +48,6 @@ export const movies: movie[] = [
         nominee: "Romania",
       },
     ],
-    image: "/images/collective.jpg",
   },
   {
     title: "Crip Camp",
@@ -70,31 +57,28 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/crip-camp.jpg",
   },
   {
     title: "Da 5 Bloods",
     nominations: [
       {
         category: "Original Score",
-        nominee: "",
+        nominee: "Terence Blanchard",
       },
     ],
-    image: "/images/da-5-bloods.jpg",
   },
   {
     title: "Emma",
     nominations: [
       {
         category: "Costume Design",
-        nominee: "",
+        nominee: "Alexandra Byrne",
       },
       {
         category: "Makeup and Hair Styling",
-        nominee: "",
+        nominee: "Marese Langan",
       },
     ],
-    image: "/images/emma.jpg",
   },
   {
     title: "Eurovision Song Contest: The Story of Fire Saga",
@@ -104,7 +88,6 @@ export const movies: movie[] = [
         nominee: "Husavik",
       },
     ],
-    image: "/images/eurovision.jpg",
   },
   {
     title: "The Father",
@@ -119,7 +102,7 @@ export const movies: movie[] = [
       },
       {
         category: "Adapted Screenplay",
-        nominee: "",
+        nominee: "Christopher Hampton",
       },
       {
         category: "Best Picture",
@@ -127,24 +110,22 @@ export const movies: movie[] = [
       },
       {
         category: "Film Editing",
-        nominee: "",
+        nominee: "Yorgos Lamprinos",
       },
       {
         category: "Production Design",
         nominee: "",
       },
     ],
-    image: "/images/the-father.jpg",
   },
   {
     title: "Greyhound",
     nominations: [
       {
         category: "Achievement in Sound",
-        nominee: "",
+        nominee: "Warren Shaw",
       },
     ],
-    image: "/images/greyhound.jpg",
   },
   {
     title: "Hillbilly Elegy",
@@ -155,10 +136,9 @@ export const movies: movie[] = [
       },
       {
         category: "Makeup and Hair Styling",
-        nominee: "",
+        nominee: "Eryn Krueger Mekash",
       },
     ],
-    image: "/images/hillbilly-elegy.jpg",
   },
   {
     title: "Judas and the Black Messiah",
@@ -185,10 +165,9 @@ export const movies: movie[] = [
       },
       {
         category: "Original Screenplay",
-        nominee: "",
+        nominee: "Will Berson",
       },
     ],
-    image: "/images/judas-and-the-black-messiah.jpg",
   },
   {
     title: "The Life Ahead (La Vita Davanti a Se)",
@@ -198,7 +177,6 @@ export const movies: movie[] = [
         nominee: "lo Sì (Seen)",
       },
     ],
-    image: "/images/the-life-ahead.jpg",
   },
   {
     title: "Love and Monsters",
@@ -208,7 +186,6 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/love-and-monsters.jpg",
   },
   {
     title: "Ma Rainey's Black Bottom",
@@ -223,18 +200,17 @@ export const movies: movie[] = [
       },
       {
         category: "Costume Design",
-        nominee: "",
+        nominee: "Ann Roth",
       },
       {
         category: "Makeup and Hair Styling",
-        nominee: "",
+        nominee: "Sergio Lopez-Rivera",
       },
       {
         category: "Production Design",
         nominee: "",
       },
     ],
-    image: "/images/ma-raineys-black-bottom.jpg",
   },
   {
     title: "The Man Who Sold His Skin",
@@ -244,14 +220,13 @@ export const movies: movie[] = [
         nominee: "Tunisia",
       },
     ],
-    image: "/images/the-man-who-sold-his-skin.jpg",
   },
   {
     title: "Mank",
     nominations: [
       {
         category: "Achievement in Sound",
-        nominee: "",
+        nominee: "Ren Klyce",
       },
       {
         category: "Actress in a Supporting Role",
@@ -270,23 +245,26 @@ export const movies: movie[] = [
         nominee: "Erik Messerschmidt",
       },
       {
+        category: "Costume Design",
+        nominee: "Trish Summerville",
+      },
+      {
         category: "Director",
         nominee: "David Fincher",
       },
       {
         category: "Makeup and Hair Styling",
-        nominee: "",
+        nominee: "Kimberley Spiteri",
       },
       {
         category: "Original Score",
-        nominee: "",
+        nominee: "Trent Reznor",
       },
       {
         category: "Production Design",
         nominee: "",
       },
     ],
-    image: "/images/mank.jpg",
   },
   {
     title: "The Midnight Sky",
@@ -296,7 +274,6 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/the-midnight-sky.jpg",
   },
   {
     title: "Minari",
@@ -319,14 +296,13 @@ export const movies: movie[] = [
       },
       {
         category: "Original Score",
-        nominee: "",
+        nominee: "Emile Mosseri",
       },
       {
         category: "Original Screenplay",
-        nominee: "",
+        nominee: "Lee Isaac Chung",
       },
     ],
-    image: "/images/minari.jpg",
   },
   {
     title: "The Mole Agent",
@@ -336,21 +312,19 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/the-mole-agent.jpg",
   },
   {
     title: "Mulan",
     nominations: [
       {
         category: "Costume Design",
-        nominee: "",
+        nominee: "Bina Daigeler",
       },
       {
         category: "Visual Effects",
         nominee: "",
       },
     ],
-    image: "/images/mulan.jpg",
   },
   {
     title: "My Octopus Teacher",
@@ -360,14 +334,13 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/my-octopus-teacher.png",
   },
   {
     title: "News of the World",
     nominations: [
       {
         category: "Achievement in Sound",
-        nominee: "",
+        nominee: "Oliver Tarney",
       },
       {
         category: "Cinematography",
@@ -375,14 +348,13 @@ export const movies: movie[] = [
       },
       {
         category: "Original Score",
-        nominee: "",
+        nominee: "James Newton Howard",
       },
       {
         category: "Production Design",
         nominee: "",
       },
     ],
-    image: "/images/news-of-the-world.jpg",
   },
   {
     title: "Nomadland",
@@ -393,7 +365,7 @@ export const movies: movie[] = [
       },
       {
         category: "Adapted Screenplay",
-        nominee: "",
+        nominee: "Chloé Zhao",
       },
       {
         category: "Best Picture",
@@ -409,10 +381,9 @@ export const movies: movie[] = [
       },
       {
         category: "Film Editing",
-        nominee: "",
+        nominee: "Chloé Zhao",
       },
     ],
-    image: "/images/nomadland.jpg",
   },
   {
     title: "The One and Only Ivan",
@@ -422,7 +393,6 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/the-one-and-only-ivan.jpg",
   },
   {
     title: "One Night in Miami…",
@@ -433,14 +403,13 @@ export const movies: movie[] = [
       },
       {
         category: "Adapted Screenplay",
-        nominee: "",
+        nominee: "Kemp Powers",
       },
       {
         category: "Original Song",
         nominee: "Speak Now",
       },
     ],
-    image: "/images/one-night-in-miami.jpg",
   },
   {
     title: "Onward",
@@ -450,7 +419,6 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/onward.jpg",
   },
   {
     title: "Over the Moon",
@@ -460,7 +428,6 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/over-the-moon.jpg",
   },
   {
     title: "Pieces of a Woman",
@@ -470,21 +437,19 @@ export const movies: movie[] = [
         nominee: "Vanessa Kirby",
       },
     ],
-    image: "/images/pieces-of-a-woman.jpg",
   },
   {
     title: "Pinocchio",
     nominations: [
       {
         category: "Costume Design",
-        nominee: "",
+        nominee: "Massimo Cantini Parrini",
       },
       {
         category: "Makeup and Hair Styling",
-        nominee: "",
+        nominee: "Mark Coulier",
       },
     ],
-    image: "/images/pinocchio.jpg",
   },
   {
     title: "Promising Young Woman",
@@ -503,14 +468,13 @@ export const movies: movie[] = [
       },
       {
         category: "Film Editing",
-        nominee: "",
+        nominee: "Frédéric Thoraval",
       },
       {
         category: "Original Screenplay",
-        nominee: "",
+        nominee: "Emerald Fennell",
       },
     ],
-    image: "/images/promising-young-woman.jpg",
   },
   {
     title: "Quo Vadis, Aida?",
@@ -520,7 +484,6 @@ export const movies: movie[] = [
         nominee: "Bosnia and Herzegovina",
       },
     ],
-    image: "/images/quo-vadis-aida.jpg",
   },
   {
     title: "A Shaun the Sheep Movie: Farmageddon",
@@ -530,14 +493,13 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/shaun-the-sheep.jpg",
   },
   {
     title: "Soul",
     nominations: [
       {
         category: "Achievement in Sound",
-        nominee: "",
+        nominee: "Ren Klyce",
       },
       {
         category: "Animated Feature Film",
@@ -545,17 +507,16 @@ export const movies: movie[] = [
       },
       {
         category: "Original Score",
-        nominee: "",
+        nominee: "Trent Reznor",
       },
     ],
-    image: "/images/soul.jpg",
   },
   {
     title: "Sound of Metal",
     nominations: [
       {
         category: "Achievement in Sound",
-        nominee: "",
+        nominee: "Nicolas Becker",
       },
       {
         category: "Actor in a Leading Role",
@@ -571,14 +532,13 @@ export const movies: movie[] = [
       },
       {
         category: "Film Editing",
-        nominee: "",
+        nominee: "Mikkel E.G. Nielsen",
       },
       {
         category: "Original Screenplay",
-        nominee: "",
+        nominee: "Darius Marder",
       },
     ],
-    image: "/images/sound-of-metal.png",
   },
   {
     title: "Tenet",
@@ -592,6 +552,70 @@ export const movies: movie[] = [
         nominee: "",
       },
     ],
-    image: "/images/tenet.jpg",
+  },
+  {
+    title: "Time",
+    nominations: [
+      {
+        category: "Documentary Feature",
+        nominee: "",
+      },
+    ],
+  },
+  {
+    title: "The Trial of the Chicago 7",
+    nominations: [
+      {
+        category: "Actor in a Supporting Role",
+        nominee: "Sacha Baron Cohen",
+      },
+      {
+        category: "Best Picture",
+        nominee: "",
+      },
+      {
+        category: "Cinematography",
+        nominee: "Phedon Papamichael",
+      },
+      {
+        category: "Film Editing",
+        nominee: "Alan Baumgarten",
+      },
+      {
+        category: "Original Song",
+        nominee: "Hear My Voice",
+      },
+      {
+        category: "Original Screenplay",
+        nominee: "Aaron Sorkin",
+      },
+    ],
+  },
+  {
+    title: "The United States vs. Billie Holiday",
+    nominations: [
+      {
+        category: "Actress in a Leading Role",
+        nominee: "Andra Day",
+      },
+    ],
+  },
+  {
+    title: "The White Tiger",
+    nominations: [
+      {
+        category: "Adapted Screenplay",
+        nominee: "Ramin Bahrani",
+      },
+    ],
+  },
+  {
+    title: "Wolfwalkers",
+    nominations: [
+      {
+        category: "Animated Feature Film",
+        nominee: "",
+      },
+    ],
   },
 ];
