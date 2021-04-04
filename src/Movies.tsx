@@ -13,12 +13,10 @@ export default function Movies() {
           <div className="pr-4">
             <input type="checkbox" />
           </div>
-          {movie.image && (
-            <div className="pr-4">
-              <img src={movie.image} className="w-24" alt={movie.title} />
-            </div>
-          )}
-          <div>
+          <div className="pr-4 w-16 md:w-24">
+            <img src={movie.image} alt={movie.title} />
+          </div>
+          <div className="w-56 md:w-auto">
             <h3 className="font-bold">{movie.title}</h3>
             <ul>
               {movie.nominations?.map((nomination, index) => (
