@@ -53,7 +53,7 @@ export default function App() {
   categories.sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return (
-    <main className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
       <Movies
         movies={movies}
         watched={watched}
