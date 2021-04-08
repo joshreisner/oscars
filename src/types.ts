@@ -1,4 +1,4 @@
-type nomination = {
+export type nomination = {
   category: string;
   nominee?: string;
 };
@@ -20,9 +20,16 @@ export type category = {
   id: string;
 };
 
-type nominee = {
+export type nominee = {
   title: string;
   nominee?: string;
   watched: boolean;
   id?: string;
+};
+
+export type user = {
+  uid: string;
+  displayName: string;
+  photoURL: string;
+  email: string;
 };

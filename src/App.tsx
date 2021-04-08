@@ -2,9 +2,21 @@ import React, { useState } from "react";
 
 import Movies from "./components/Movies";
 import Categories from "./components/Categories";
+import Login from "./components/Login";
+import Settings from "./components/Settings";
+
 import { rawMovies } from "./data/2021";
 import { category, movie } from "./types";
 import slug from "slug";
+
+import firebase from "firebase/app";
+import "firebase/auth";
+import { config } from "./firebase.config";
+
+import {
+  FirebaseAuthProvider,
+  FirebaseAuthConsumer,
+} from "@react-firebase/auth";
 
 export default function App() {
   const rawWatched = localStorage.getItem("watched2021");
@@ -53,20 +65,33 @@ export default function App() {
   categories.sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return (
-    <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
-      <Movies
-        movies={movies}
-        watched={watched}
-        setWatched={setWatched}
-        picks={picks}
-      />
-      <Categories
-        movies={movies}
-        categories={categories}
-        watched={watched}
-        picks={picks}
-        setPicks={setPicks}
-      />
-    </main>
+    <FirebaseAuthProvider {...config} firebase={firebase}>
+      <FirebaseAuthConsumer>
+        {({ isSignedIn, user }) => {
+          return isSignedIn ? (
+            <>
+              <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
+                <Movies
+                  movies={movies}
+                  watched={watched}
+                  setWatched={setWatched}
+                  picks={picks}
+                />
+                <Categories
+                  movies={movies}
+                  categories={categories}
+                  watched={watched}
+                  picks={picks}
+                  setPicks={setPicks}
+                />
+              </main>
+              <Settings user={user} />
+            </>
+          ) : (
+            <Login />
+          );
+        }}
+      </FirebaseAuthConsumer>
+    </FirebaseAuthProvider>
   );
 }
