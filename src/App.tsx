@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Movies from "./components/Movies";
 import Categories from "./components/Categories";
+import Loading from "./components/Loading";
 import Login from "./components/Login";
 import Settings from "./components/Settings";
 
@@ -17,6 +18,8 @@ import {
   FirebaseAuthProvider,
   FirebaseAuthConsumer,
 } from "@react-firebase/auth";
+
+let renderCounter = 0;
 
 export default function App() {
   const rawWatched = localStorage.getItem("watched2021");
@@ -63,11 +66,11 @@ export default function App() {
     });
   });
   categories.sort((a, b) => (a.name > b.name ? 1 : -1));
-
   return (
     <FirebaseAuthProvider {...config} firebase={firebase}>
       <FirebaseAuthConsumer>
         {({ isSignedIn, user }) => {
+          renderCounter++;
           return isSignedIn ? (
             <>
               <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
@@ -87,6 +90,8 @@ export default function App() {
               </main>
               <Settings user={user} />
             </>
+          ) : renderCounter === 1 ? (
+            <Loading />
           ) : (
             <Login />
           );

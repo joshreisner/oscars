@@ -26,10 +26,3 @@ export type nominee = {
   watched: boolean;
   id?: string;
 };
-
-export type user = {
-  uid: string;
-  displayName: string;
-  photoURL: string;
-  email: string;
-};
