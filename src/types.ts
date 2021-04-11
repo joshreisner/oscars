@@ -1,23 +1,23 @@
-export type nomination = {
-  category: string;
-  nominee?: string;
-};
-
-export type rawMovie = {
+export type category = {
+  id: string;
   title: string;
-  nominations: nomination[];
+  nominees: nominee[];
 };
 
 export type movie = {
+  id: string;
   title: string;
   nominations: nomination[];
-  id: string;
+  poster: {
+    url: string;
+    width: number;
+    height: number;
+  };
 };
 
-export type category = {
-  name: string;
-  nominees: nominee[];
-  id: string;
+export type nomination = {
+  category: string;
+  nominee?: string;
 };
 
 export type nominee = {

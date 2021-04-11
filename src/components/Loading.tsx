@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Loading() {
+export function Loading() {
   return (
     <div className="justify-center items-center flex h-screen">
       <svg

@@ -7,15 +7,9 @@ type MoviesProps = {
   movies: movie[];
   watched: string[];
   setWatched: React.Dispatch<React.SetStateAction<string[]>>;
-  picks: string[];
 };
 
-export default function Movies({
-  movies,
-  watched,
-  setWatched,
-  picks,
-}: MoviesProps) {
+export function Movies({ movies, watched, setWatched }: MoviesProps) {
   const [filtered, setFiltered] = useState(false);
   return (
     <section>
@@ -71,7 +65,9 @@ export default function Movies({
             </div>
             <div className="pr-4 w-16 md:w-24">
               <img
-                src={`/images/${movie.id}.jpg`}
+                src={movie.poster.url}
+                width={movie.poster.width}
+                height={movie.poster.height}
                 alt={movie.title}
                 className="border rounded"
               />

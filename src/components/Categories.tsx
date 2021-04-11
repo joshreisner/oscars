@@ -10,7 +10,7 @@ type CategoriesProps = {
   setPicks: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
-export default function Categories({
+export function Categories({
   movies,
   categories,
   watched,
@@ -54,7 +54,7 @@ export default function Categories({
           picks.filter((id) => id.startsWith(category.id)).length > 0;
         return !filtered || !hasPick ? (
           <article key={index} className="border-gray-200 border-t-2 py-4 ">
-            <h3 className="font-bold">{category.name}</h3>
+            <h3 className="font-bold">{category.title}</h3>
             {category.nominees.map((nominee, index) => (
               <label className="flex items-center cursor-pointer" key={index}>
                 <input

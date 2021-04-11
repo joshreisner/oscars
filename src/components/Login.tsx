@@ -1,7 +1,7 @@
 import React from "react";
 import firebase from "firebase/app";
 
-export default function Login() {
+export function Login() {
   return (
     <div className="justify-center items-center flex h-screen">
       <div className="max-w-xs bg-white border p-4 rounded text-center">
