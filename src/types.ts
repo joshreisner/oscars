@@ -21,8 +21,35 @@ export type nomination = {
 };
 
 export type nominee = {
-  title: string;
+  id: string;
+  movie: string;
   nominee?: string;
-  watched: boolean;
-  id?: string;
+};
+
+export type oscarNominationsCollection = {
+  oscarNominationsCollection: {
+    items: {
+      sys: {
+        id: string;
+      };
+      nominee?: string;
+      category: {
+        sys: {
+          id: string;
+        };
+        title: string;
+      };
+      movie: {
+        title: string;
+        poster: {
+          height: number;
+          width: number;
+          url: string;
+        };
+        sys: {
+          id: string;
+        };
+      };
+    }[];
+  };
 };

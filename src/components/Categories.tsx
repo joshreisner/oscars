@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import cx from "classnames";
-import { category, movie } from "../types";
+import { category } from "../types";
 
 type CategoriesProps = {
-  movies: movie[];
   categories: category[];
   watched: string[];
   picks: string[];
@@ -11,7 +10,6 @@ type CategoriesProps = {
 };
 
 export function Categories({
-  movies,
   categories,
   watched,
   picks,
@@ -73,12 +71,12 @@ export function Categories({
                 />
                 <span
                   className={cx({
-                    "line-through text-gray-500": nominee.watched,
+                    "line-through text-gray-500": watched.includes(nominee.id),
                   })}
                 >
                   {nominee.nominee
-                    ? `${nominee.nominee}: ${nominee.title}`
-                    : nominee.title}
+                    ? `${nominee.nominee}: ${nominee.movie}`
+                    : nominee.movie}
                 </span>
               </label>
             ))}

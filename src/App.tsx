@@ -1,62 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import { Movies, Categories, Loading, Login, Settings } from "./components";
+import { Movies, Categories, Loading } from "./components";
 
-import firebase from "firebase/app";
-import "firebase/auth";
-import { config } from "./firebase.config";
-
-import { Data } from "./contentful";
-
-import {
-  FirebaseAuthProvider,
-  FirebaseAuthConsumer,
-} from "@react-firebase/auth";
-
-let renderCounter = 0;
-
-type AuthProps = {
-  isSignedIn: boolean;
-  user: firebase.User;
-};
+import { Data, Storage, setStorage } from "./contentful";
 
 export default function App() {
-  const [watched, setWatched] = useState<string[]>([]);
-  const [picks, setPicks] = useState<string[]>([]);
-  const { movies, categories } = Data();
+  const { loading, movies, categories } = Data();
+  const { initialWatched, initialPicks } = Storage();
+  const [watched, setWatched] = useState<string[]>(initialWatched);
+  const [picks, setPicks] = useState<string[]>(initialPicks);
 
-  return (
-    <FirebaseAuthProvider {...config} firebase={firebase}>
-      <FirebaseAuthConsumer>
-        {({ isSignedIn, user }: AuthProps) => {
-          renderCounter++;
-          return isSignedIn ? (
-            <>
-              <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
-                <Movies
-                  movies={movies}
-                  watched={watched}
-                  setWatched={setWatched}
-                />
-                <Categories
-                  movies={movies}
-                  categories={categories}
-                  watched={watched}
-                  picks={picks}
-                  setPicks={setPicks}
-                />
-              </main>
-              <div className="container mx-auto px-4 pb-5">
-                <Settings user={user} />
-              </div>
-            </>
-          ) : renderCounter === 1 ? (
-            <Loading />
-          ) : (
-            <Login />
-          );
-        }}
-      </FirebaseAuthConsumer>
-    </FirebaseAuthProvider>
+  //observe and save changes
+  useEffect(() => {
+    setStorage(watched, picks);
+  }, [watched, picks]);
+
+  return loading ? (
+    <Loading />
+  ) : (
+    <main className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 min-h-screen">
+      <Movies movies={movies} watched={watched} setWatched={setWatched} />
+      <Categories
+        categories={categories}
+        watched={watched}
+        picks={picks}
+        setPicks={setPicks}
+      />
+    </main>
   );
 }
